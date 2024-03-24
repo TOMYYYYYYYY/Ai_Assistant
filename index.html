@@ -2,12 +2,17 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Chatbot</title>
+  <title>CodePen - Chatbot</title>
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+  <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
+  <h1>test</h1>
+  <py-script> print('Now you can!') </py-script>
+
+  <!-- partial:index.partial.html -->
 <div id="chatbot" class="main-card collapsed">
   <button class="tooltip" id="chatbot_toggle">
     
@@ -27,11 +32,11 @@
   
   <div class="chat-area" id="message-box"></div>
   <div class="button-container">
-    <!--
+    <!---
   <button  id="myButton1" class="sugestion2" onclick="suggestion('myButton1')">bonjouerwgergwergewr</button>
   <button  id="myButton2" class="sugestion2" onclick="suggestion('myButton2')">bonjour</button>
   <button  id="myButton3" class="sugestion2" onclick="suggestion('myButton3')">bonjour</button>
-    -->
+    --->
 </div>
   <button class >
   <div class="line"></div>
@@ -63,10 +68,11 @@
       var index = ['myButton1', 'myButton2', 'myButton3'].indexOf(id);
       var msg = suggestion[index];
       addMsg(msg);
+      sendMsgToServer(msg,userId);
+      hide();
       } else {
       return;
     } 
-    hide();
     first = false;
   }
 </script>   
